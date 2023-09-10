@@ -1,0 +1,999 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Human Verification!", HidePremium = false, SaveConfig = true, ConfigFolder = "Verification code."})
+
+OrionLib:MakeNotification({
+	Name = "You logged in!",
+	Content = "Welcome to Verification system!.You need to verify first!, you we're log in as "..Player.Name.." ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+_G.Key = "yosup"
+_G.KeyInput = "yosup"
+
+function MakeScriptHub()
+  OrionLib:Destroy()
+  OrionLib:MakeNotification({
+	Name = "Devil X Revamp Thanks for using my script!",
+	Content = "made by xylex_vxpe",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local player = game.Players.LocalPlayer
+local Tween = game:GetService("TweenService")
+local CoreGui = game:GetService("CoreGui")
+local UI = Instance.new("ScreenGui")
+local Corner = Instance.new("UICorner") 
+local Loader = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local PositionClosed = UDim2.new(-1, 0, 0, 105)
+local PositionOpen = UDim2.new(0, 270, 0, 90)
+local Corner2 = Instance.new("UICorner") 
+local Circle1 = Instance.new("Frame")
+local Circle2 = Instance.new("Frame")
+local Corner3 = Instance.new("UICorner") 
+local Position1 = UDim2.new(0, 90, 0, 30)
+local Position2 = UDim2.new(0, 190, 0, 30)
+local bar = Instance.new("Frame")
+local Corner4 = Instance.new("UICorner") 
+
+UI.Name = "UI"
+UI.Parent = CoreGui
+
+Corner.Name = "Corner"
+Corner.Parent = Loader
+
+Loader.Name = "Loader"
+Loader.Parent = UI
+Loader.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+Loader.Size = UDim2.new(0, 350, 0, 170)
+Loader.Position = PositionClosed
+Loader.Draggable = false
+Loader.Active = true
+
+Title.Name = "Title"
+Title.Parent = Loader
+Title.BackgroundColor3 = Color3.fromRGB(28, 115, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0, 100, 0, 110)
+Title.Size = UDim2.new(0, 150, 0, 25)
+Title.Font = Enum.Font.GothamBlack
+Title.Text = "Loading"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+
+Corner2.Name = "Corner2"
+Corner2.Parent = Circle1
+Corner2.CornerRadius = UDim.new(0.5, 0) 
+
+Circle1.Name = "Circle1"
+Circle1.Parent = Loader
+Circle1.BackgroundColor3 = Color3.fromRGB(110, 110, 110)
+Circle1.BackgroundTransparency = 0.5
+Circle1.Size = UDim2.new(0, 70, 0, 70)
+Circle1.Position = UDim2.new(0, 90, 0, 30)
+Circle1.Visible = false
+
+Corner3.Name = "Corner3"
+Corner3.Parent = Circle2
+Corner3.CornerRadius = UDim.new(0.5, 0) 
+
+Circle2.Name = "Circle2"
+Circle2.Parent = Loader
+Circle2.BackgroundColor3 = Color3.fromRGB(110, 110, 110)
+Circle2.BackgroundTransparency = 0.5
+Circle2.Size = UDim2.new(0, 70, 0, 70)
+Circle2.Position = UDim2.new(0, 190, 0, 30)
+Circle2.Visible = false
+
+Corner4.Name = "Corner4"
+Corner4.Parent = bar
+Corner4.CornerRadius = UDim.new(0.5, 0) 
+
+bar.Name = "bar"
+bar.Parent = Loader
+bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bar.Position = UDim2.new(0, 50, 0, 150)
+bar.Size = UDim2.new(0, 0, 0, 7)
+bar.BackgroundTransparency = 1
+
+Loader:TweenPosition(
+    PositionOpen,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(2)
+
+for i = 1,10 do
+    wait()
+    Circle1.Visible = true
+    Circle1.BackgroundTransparency = 1-(i/10)
+end
+
+for i = 1,10 do
+    wait()
+    Circle2.Visible = true
+    Circle2.BackgroundTransparency = 1-(i/10)
+end
+
+wait(1)
+
+Circle1:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(1)
+bar.BackgroundTransparency = 0
+bar:TweenSize(UDim2.new(0, 30,0, 7)) 
+
+wait(2)
+
+Circle1:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(1)
+
+bar:TweenSize(UDim2.new(0, 70,0, 7)) 
+
+wait(2)
+
+Circle1:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(0.50)
+
+bar:TweenSize(UDim2.new(0, 90,0, 7)) 
+
+wait(0.50)
+
+bar:TweenSize(UDim2.new(0, 110,0, 7)) 
+
+wait(2)
+
+Circle1:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(2)
+
+Circle1:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(1)
+
+bar:TweenSize(UDim2.new(0, 170,0, 7)) 
+
+wait(2)
+
+Circle1:TweenPosition(
+    Position1,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+Circle2:TweenPosition(
+    Position2,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    0.70,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+
+wait(1)
+
+bar:TweenSize(UDim2.new(0, 250,0, 7))
+
+wait(1)
+
+Title.Text = "Loaded!"
+Title.TextColor3 = Color3.fromRGB(18, 227, 46)
+
+wait(1)
+
+Loader:TweenPosition(
+    PositionClosed,           -- Final position the tween should reach
+    Enum.EasingDirection.In, -- Direction of the easing
+    Enum.EasingStyle.Linear,   -- Kind of easing to apply
+    1,                       -- Duration of the tween in seconds
+    true                    -- Whether in-progress tweens are interrupted
+)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(0.858712733, 0, 0.0237762257, 0)
+Frame.Size = UDim2.new(0.129513338, 0, 0.227972031, 0)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Devil X"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 50.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
+end)
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 50
+
+
+
+
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("DevilX Revamp","Sentinel")
+
+---Tabs
+
+local Tab1 = window:NewTab("info")
+local Tab1Section = Tab1:NewSection("There Will be no Obby")
+local Tab2 = window:NewTab("Credits")
+local Tab2Section = Tab2:NewSection("Source By JN HH Gaming")
+local Tab2Section = Tab2:NewSection("Credits to me")
+local Tab3 = window:NewTab("Simulator")
+local Tab3Section = Tab3:NewSection("Simulator games")
+local Tab4 = window:NewTab("Fighting")
+local Tab4Section = Tab4:NewSection("Fighting games")
+local Tab4Section = Tab4:NewSection("bro u cant fight")
+local Tab5 = window:NewTab("Horror")
+local Tab5Section = Tab5:NewSection("Scary Games")
+local Tab6 = window:NewTab("Universal")
+local Tab6Section = Tab6:NewSection("All Games scripts")
+local Tab7 = window:NewTab("Personal")
+local Tab7Section = Tab7:NewSection("Very soon!")
+local Tab8 = window:NewTab("sharkbite")
+local Tab8Section = Tab8:NewSection("I made this script choose any boat you want")
+local Tab9 = window:NewTab("Roleplay")
+local Tab9Section = Tab9:NewSection("Roleplay games")
+local Tab10 = window:NewTab("Tycoon")
+local Tab10Section = Tab10:NewSection("Tycoon Games")
+
+---Buttons
+
+Tab8Section:NewButton("DuckyBoat", "Chooses DuckyBoat", function()
+    local args = {
+		[1] = "DuckyBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+Tab8Section:NewButton("CruiseShip", "Chooses BlueWoodenMotorboat", function()
+    local args = {
+		[1] = "CruiseShip"
+	}
+
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+Tab8Section:NewButton("BlueWoodenMotorboat", "Chooses BlueWoodenMotorboat", function()
+    local args = {
+		[1] = "BlueWoodenMotorboat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+Tab8Section:NewButton("Jetski", "Chooses Jetski", function()
+    local args = {
+		[1] = "Jetski"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("DuckyBoatBeta", "Chooses DuckyBoatBeta", function()
+    local args = {
+		[1] = "DuckyBoatBeta"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("Marlin", "Chooses Marlin", function()
+    local args = {
+		[1] = "Marlin"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("Catamaran", "Chooses Catamaran", function()
+    local args = {
+		[1] = "Catamaran"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("TubeBoat", "Chooses TubeBoat", function()
+    local args = {
+		[1] = "TubeBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("Sloop", "Chooses Sloop", function()
+    local args = {
+		[1] = "Sloop"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("CombatBoat", "Chooses CombatBoat", function()
+    local args = {
+		[1] = "CombatBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("FishingBoat", "Chooses FishingBoat", function()
+    local args = {
+		[1] = "FishingBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("Duckmarine", "Chooses Duckmarine", function()
+    local args = {
+		[1] = "Duckmarine"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("GingerbreadSteamBoat", "Chooses GingerbreadSteamBoat", function()
+    local args = {
+		[1] = "GingerbreadSteamBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("SmallDinghyMotorboat", "Chooses SmallDinghyMotorboat", function()
+    local args = {
+		[1] = "SmallDinghyMotorboat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+Tab8Section:NewButton("Sleigh2022", "Chooses Sleigh2022", function()
+    local args = {
+		[1] = "Sleigh2022"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("Snowmobile", "Chooses Snowmobile", function()
+    local args = {
+		[1] = "Snowmobile"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("PartyBoat", "Chooses PartyBoat", function()
+    local args = {
+		[1] = "PartyBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Tab8Section:NewButton("MilitarySubmarine", "Chooses MilitarySubmarine", function()
+    local args = {
+		[1] = "MilitarySubmarine"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+Tab3Section:NewButton("Fly Race: Auto Farm, Collect Orbs, Auto Rebirth", "kys", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Amenteso/robloxscripts/main/Key.lua",true))()
+end)
+
+Tab9Section:NewButton("Emergency Response: Liberty County: Postal AutoFarm", "ButtonInfo", function()
+    getgenv().PostalFarm = true --toggle autofarm, there are always checkpoints like when you pick up the mail, deliver it or when the car farm starts again
+getgenv().TeamCheck = false --that checks if you are in the civilian team if not it will join the civilian team, is needed if you are in another team!!!!
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mcletshacks/ArgonHubV2/main/Free%20scripts%20for%20users/PostalAutoFarm.lua", true))()
+end)
+
+Tab3Section:NewButton("Tapping Simulator: Auto Rebirth, Auto Claim Rewards, Auto Eggs", "Kys", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JellyBagBeans/CelestialHub/main/GameLoader"))()
+end)
+
+Tab10Section:NewButton("Restaurant Tycoon 2: NPC Instant Cook", "made by me", function()
+    local chiefInstantCook = true
+local npcReach = true
+
+local Client = game.Players.LocalPlayer
+local PS = Client.PlayerScripts
+local Module = require(PS.ClientMain.Replications.Workers.WalkDummy)
+local Worker = require(PS.CookingNew.WorkerComponents.WorkerDefault)
+local M1 = require(PS.ClientMain.Replications.Customers.GetNPCFolder)
+
+end)
+
+Tab3Section:NewButton("Funky Friday: Auto Play, Auto Collect Rings, Delay mode", "ButtonInfo", function()
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+ local message = Instance.new("Message", workspace)
+        message.Text = "Loaded! If the script is not working, press 'F9' to check for any errors."
+        wait(4.5)
+        message:Destroy()
+end)
+
+Tab10Section:NewButton("House Tycoon: Auto Collect Cash, Anti Afk, Auto Build", "ButtonInfo", function()
+    loadstring(game:HttpGet"https://thedragonslayer2.github.io/AutoExec.html")()
+end)
+
+Tab3Section:NewButton("cursed tank simulator [Increase Ammunition hitbox]", "ButtonInfo", function()
+    while wait(5) do
+for i, stuff in pairs(game:GetService("Workspace").Vehicles:GetDescendants()) do
+if stuff.Name == 'Ammunition1' or stuff.Name == 'Ammunition2' or stuff.Name == 'Ammunition3' or stuff.Name == 'Ammunition4' or stuff.Name == 'Ammunition5' then
+stuff. Size = Vector3.new(5, 5, 5)
+stuff. Transparency = 0.9
+stuff.CanCollide = false
+end
+end
+end
+end)
+
+Tab5Section:NewButton("Survive and Kill the Killers in Area 51 [Esp, inf Ammo, Give all weapons]", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://github.com/Legenda06/Survive-and-Kill-the-Killers/blob/main/lua",true))()
+end)
+
+Tab3Section:NewButton("Weapon Fighting Simulator [Auto Farm, Collect Rewards, Select Area]", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Bd6R0GaC"))()
+end)
+
+Tab3Section:NewButton("Money Clicker Simulator: Auto Click, Auto Rebirth, Teleports", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidSkids/MoneyClickerSim/main/README.md"))()
+end)
+
+Tab6Section:NewButton("Universal: Xray", "ButtonInfo", function()
+    local RunService = game:GetService('RunService')
+local LocalPlayer = game:GetService('Players').LocalPlayer
+local Camera = workspace.CurrentCamera
+local Obscuring = {}
+
+RunService.RenderStepped:connect(function()
+    for _, v in pairs(Obscuring) do 
+        v.LocalTransparencyModifier = 0
+        for _, v2 in pairs(v:GetChildren()) do
+            if v2:IsA('Texture') then
+                v2.Transparency = 1000
+            end
+        end
+    end
+
+    if not LocalPlayer.Character then return end
+    Obscuring = Camera:GetPartsObscuringTarget({LocalPlayer.Character.HumanoidRootPart.CFrame.p}, LocalPlayer.Character:GetChildren())
+
+    for _, v in pairs(Obscuring) do 
+        v.LocalTransparencyModifier = 1
+        for _, v2 in pairs(v:GetChildren()) do
+            if v2:IsA('Texture') then
+                v2.Transparency = 1000
+            end
+        end
+    end    
+end)
+
+end)
+
+Tab3Section:NewButton("Chaotic Bean Simulator [Auto Farm]", "ButtonInfo", function()
+    _G.Auto = true
+
+while _G.Auto == true do
+local args = {[1] = 3}
+game:GetService("ReplicatedStorage").Events.OnLandFromJump:FireServer(unpack(args))
+wait()
+end
+end)
+
+Tab6Section:NewButton("Universal FE Invisible Beta", "ButtonInfo", function()
+    -- Ranxware | FE Invisibility Module | Version: Beta V1 --
+
+local InvisibilitySettings = {
+	TransparentClone = true, -- Makes the clone's body transparent
+	QuickMode = true, -- Forces module to be quicker
+	ChatNotifier = true, -- Makes notifications in chat (new chat version only)
+	Fly = false, -- Makes you fly when invisible
+	FlySpeed = 50, -- Optimizes fly speed
+	NoClip = false, -- Makes you noclip when invisible
+}
+
+
+--[ PLEASE DO NOT TOUCH ANYTHING BELOW IF YOU DON'T KNOW WHAT YOU'RE DOING!! ]--
+
+local noclipCon = nil
+local flyCon = nil
+
+if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
+	InvisibilitySettings.ChatNotifier = false
+end
+
+
+local lplr = game.Players.LocalPlayer
+local char = lplr.Character
+char.Archivable = true
+
+print("Starting cloning module...")
+if InvisibilitySettings.ChatNotifier then
+	game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Starting cloning phase...")
+end
+
+workspace.CurrentCamera.CameraSubject = nil
+local oldChar = char or lplr.Character
+local oldCFrame = char:GetPivot()
+
+task.wait(InvisibilitySettings.QuickMode and .1 or 1.5)
+
+-- old char protection --
+oldChar:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(1e5,1e6,1e5)
+
+task.wait(.1)
+
+oldChar:FindFirstChild("HumanoidRootPart").Anchored = true
+
+task.wait(.5)
+
+local clone = char:Clone()
+clone.Parent = workspace
+lplr.Character = clone
+workspace.CurrentCamera.CameraSubject = clone:FindFirstChildOfClass("Humanoid")
+clone:FindFirstChild("HumanoidRootPart").CFrame = oldCFrame
+clone:FindFirstChild("HumanoidRootPart").Anchored = false
+
+task.wait()
+
+if InvisibilitySettings.TransparentClone then
+	for _,i in next,clone:GetDescendants() do
+		if i:IsA("BasePart") and i.Name ~= "HumanoidRootPart" then
+			i.Transparency = 0.5
+		end
+	end
+end
+
+if clone:FindFirstChild("Animate") then
+	clone.Animate.Disabled = true
+	task.wait()
+	clone.Animate.Disabled = false
+end
+
+if InvisibilitySettings.Fly then
+	if InvisibilitySettings.ChatNotifier then
+		game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Stored fly is enabled!")
+		game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Use Space and LeftCtrl to go up and down...")
+	end
+	local vel = Instance.new("BodyVelocity",clone:FindFirstChild("HumanoidRootPart"))
+	vel.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+	flyCon = game:GetService("RunService").RenderStepped:Connect(function()
+		vel.Velocity =  clone:FindFirstChild("Humanoid").MoveDirection * InvisibilitySettings.FlySpeed
+		if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then
+			vel.Velocity = Vector3.new(vel.Velocity.X,-InvisibilitySettings.FlySpeed,vel.Velocity.Z)
+		elseif game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Space) then
+			vel.Velocity = Vector3.new(vel.Velocity.X,InvisibilitySettings.FlySpeed,vel.Velocity.Z)
+		end
+	end)
+end
+
+if InvisibilitySettings.NoClip then
+	if InvisibilitySettings.ChatNotifier then
+		game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Stored noclip is enabled!")
+	end
+	noclipCon = game:GetService("RunService").Stepped:Connect(function()
+		for _, child in next,clone:GetDescendants() do
+			if child:IsA("BasePart") and child.CanCollide == true then
+				child.CanCollide = false
+			end
+		end
+	end)
+end
+
+clone:FindFirstChildOfClass("Humanoid").DisplayName = clone.Name.." [INVISIBLE]"
+
+print("Cloning module success!")
+if InvisibilitySettings.ChatNotifier then
+	game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | You are now invisible!")
+	game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Reset to return normal")
+end
+
+task.wait()
+
+local function revert()
+	task.wait()
+	if InvisibilitySettings.ChatNotifier then
+		game.TextChatService.ChatInputBarConfiguration.TargetTextChannel:DisplaySystemMessage("Invisibility | Reverting to normal character...")
+	end
+	local clonePos = clone:GetPivot()
+	task.wait(InvisibilitySettings.QuickMode and .2 or .5)
+	if flyCon then
+		flyCon:Disconnect()
+	end
+	if noclipCon then
+		noclipCon:Disconnect()
+	end
+	task.wait(.1)
+	clone:Destroy()
+	workspace.CurrentCamera.CameraSubject = oldChar:FindFirstChildOfClass("Humanoid")
+	task.wait()
+	oldChar:FindFirstChild("HumanoidRootPart").Anchored = false
+	lplr.Character = oldChar
+	lplr.Character:PivotTo(clonePos)
+	task.wait(1)
+	return
+end
+
+char = clone
+char:FindFirstChildOfClass("Humanoid").Died:Connect(function()
+	revert()
+end)
+
+
+end)
+
+Tab3Section:NewButton("Sword Simulator: Teleports, Auto Achievements, Kill Aura", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://gitlab.com/Ner0ox/versus/-/raw/main/LoaderV2/Loader.lua"))()
+end)
+
+Tab3Section:NewButton("Saber Simulator: Auto Buy, Auto Swing, Auto Equip Saber", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://www.obscurity.cf/Loader.lua"))()
+end)
+
+Tab3Section:NewButton("NGU CLICKER SIMULATOR Gui: Auto Click, Auto Upgrade, Auto Pet Evolve", "ButtonInfo", function()
+    --// Service \\--
+local Players = game:GetService("Players")
+
+--// Variable \\--
+local Player = Players.LocalPlayer
+
+--// UI Library \\--
+local File = writefile and readfile or false
+local Library = false
+Success, Library = pcall(function()
+    return readfile("uwuware UI.lua")
+end)
+if Success == false then
+    Library = game:HttpGet('https://raw.githubusercontent.com/Just-Egg-Salad/roblox-scripts/main/uwuware')
+    if File then
+        writefile("uwuware UI.lua", Library)
+    end
+end
+Library = loadstring(Library)()
+local Window = Library:CreateWindow("Clicker by Ezpi")
+Window:AddToggle({
+    text = "Click",
+    callback = function()
+        while Library.flags.Click and task.wait() do
+            local Tool = Player.Character and Player.Character:FindFirstChildOfClass("Tool")
+            if Tool then
+                Tool:Activate()
+                Tool:Deactivate()
+            elseif Player.Character then
+                local BackTool = Player.Backpack:FindFirstChildOfClass("Tool")
+                if BackTool then
+                    BackTool.Parent = Player.Character
+                    task.wait(0.1)
+                end
+            end
+        end
+    end
+})
+Window:AddToggle({
+    text = "Upgrade",
+    callback = function()
+        local Upgrades = Player.PlayerGui.ScreenGui["UpgradeMenu_Frame"]["Upgrades_ScrollingFrame"]
+        while Library.flags.Upgrade and task.wait(0.1) do
+            for _, A_1 in next, Upgrades:GetChildren() do
+                if A_1:IsA("Frame") and A_1.Purchase_TxtBtn.Text ~= "MAX" then
+                    firesignal(A_1.Purchase_TxtBtn.Activated)
+                end
+            end
+        end
+    end
+})
+Window:AddToggle({
+    text = "Pet Evolve",
+    flag = "Pet",
+    callback = function()
+        local PetGui = Player.PlayerGui.ScreenGui["Pet_Frame"]
+        while Library.flags.Pet and task.wait(0.1) do
+            if PetGui.Evolve_TxtBtn.Visible == true then
+                firesignal(PetGui.Evolve_TxtBtn.Activated)
+            end
+            for _, Btn in next, PetGui.Quest_Frame:GetChildren() do
+                if Btn:IsA("Frame") and Btn.Full_TxtBtn.Visible == false and Btn.MaxBar_Frame.CurrentBar_Frame.Size == UDim2.new(1, 0, 1, 0) then
+                    firesignal(Btn.Feed_TxtBtn.Activated)
+                end
+            end
+        end
+    end
+})
+Library:Init()
+end)
+
+Tab10Section:NewButton("My Fish Store Tycoon", "ButtonInfo", function()
+    local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+local w = library:CreateWindow("My Fish Store")
+local b = w:CreateFolder("AutoFarm")
+local e = w:CreateFolder("Mix")
+local u = w:CreateFolder("Credits") 
+local SelectedItem = "Fishbowl"
+local SelectedFloor = "Wood"
+Items = {}
+for i,v in pairs(game:GetService("ReplicatedStorage").Resources.BuildItems.Item:GetChildren()) do
+    Items[i] = v.Name
+end
+Floor = {}
+for i,v in pairs(game:GetService("ReplicatedStorage").Resources.BuildItems.Floor:GetChildren()) do
+    Floor[i] = v.Name
+end
+--Toggle
+b:Toggle("Place Item",function(bool)
+    shared.toggle = bool
+    PlaceItem = bool
+end)
+
+b:Dropdown("Select Item",Items,true,function(mob)
+    SelectedItem = mob
+end)
+
+b:Toggle("Place Floor",function(bool)
+    shared.toggle = bool
+    PlaceFloor = bool
+end)
+
+b:Dropdown("Select Floor",Floor,true,function(mob)
+    SelectedFloor = mob
+end)
+
+e:Toggle("AntiAfk",function(bool)
+    shared.toggle = bool
+    AntiAfk = bool
+end)
+
+e:Button("Add Fish",function()
+    for i1,v1 in pairs(game:GetService("Workspace").Game.PlayerPlots:GetChildren()) do
+        for i,v in pairs(v1.Items:GetChildren()) do
+            game:GetService("ReplicatedStorage").Resources.Remotes.FishFill:FireServer("item:"..v.Name,"Carp",1)
+            game:GetService("ReplicatedStorage").Resources.Remotes.BuyFish:FireServer("Carp",1)
+        end
+    end
+end)
+--Credits
+u:Button("maxgat5#8395",function()
+    setclipboard("maxgat5#8395")
+end)
+ 
+u:Button("Discrod Server",function()
+    setclipboard("https://discord.gg/K4txdRSVfq")
+end)
+
+while wait() do
+    if PlaceItem == true then
+        x = -80
+        y = 0
+        function Place()
+            game:GetService("ReplicatedStorage").Resources.Remotes.BuildItem:FireServer(SelectedItem,x..":"..y,1,Color3.new())
+        end
+        for i=1,16*5 do
+            x = -80
+            for i=1,16*10 do
+                if PlaceItem == true then
+                    x = x + 1
+                    Place()
+                end
+            end
+            y = y + 1
+        end
+    end
+    
+    if PlaceFloor == true then
+        x = -80
+        y = 0
+        function Place()
+            game:GetService("ReplicatedStorage").Resources.Remotes.BuildFloor:FireServer(SelectedFloor,x..":"..y,Color3.new())
+        end
+        for i=1,16*5 do
+            x = -80
+            for i=1,16*10 do
+                if PlaceFloor == true then
+                    x = x + 1
+                    Place()
+                end
+            end
+            y = y + 1
+        end
+    end
+    
+    if AntiAfk == true then
+        local bb=game:service'VirtualUser'
+        bb:CaptureController()
+        bb:ClickButton2(Vector2.new())
+    end
+end
+end)
+
+
+  local Window = OrionLib:MakeWindow({Name = "DevilX Revamp", HidePremium = false, SaveConfig = true, ConfigFolder = "Mom"})
+end
+
+function CorrectCodeNotification()
+  OrionLib:MakeNotification({
+	Name = "Verified Code!",
+	Content = "You are now verified",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+
+function IncorrectCodeNotification()
+  OrionLib:MakeNotification({
+	Name = "Try again :(",
+	Content = "Wrong entered code.Please Try again.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+
+local Tab = Window:MakeTab({
+	Name = "Code please",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Code",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Verify!",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+      		  MakeScriptHub()
+      		  CorrectCodeNotification()
+      		  else
+      		  IncorrectCodeNotification()
+      		end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Get key free",
+	Callback = function()
+if setclipboard then
+	game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "Key giver", Text = "Key copied to youre clipboard", Icon = "rbxassetid://"})
+	task.wait()
+end
+
+
+setclipboard('yosup')
+  	end    
+})
+
+OrionLib:Init()
+
+
